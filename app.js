@@ -6,6 +6,11 @@ const app = express();
 
 app.use(express.static("public"));
 
+app.get("/", async (req, res) => {
+  res.send("hey")
+})
+
+
   app.get("/users/:token", async (req, res) => {
     res.header("Access-Control-Allow-Origin", "*")
 	res.header(
